@@ -33,6 +33,13 @@ int	ft_atoi(const char *str);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
 
+
+typedef struct s_list
+{
+    void    *content;
+    struct  s_list *next;
+}	t_list;
+
 // Au fur et à mesure que tu écris de nouvelles fonctions, 
 // ajoute leurs prototypes juste en dessous. Par exemple :
 // size_t	ft_strlen(const char *s);
