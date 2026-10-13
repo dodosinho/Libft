@@ -6,7 +6,7 @@
 /*   By: didias-d <didias-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 09:34:25 by didias-d          #+#    #+#             */
-/*   Updated: 2026/10/08 10:25:09 by didias-d         ###   ########.fr       */
+/*   Updated: 2026/10/13 14:30:17 by didias-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char *p;
-	size_t	i;
+	unsigned char	*p;
+	size_t			i;
 
 	p = (unsigned char *)s;
 	i = 0;
