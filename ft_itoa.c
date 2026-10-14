@@ -6,9 +6,11 @@
 /*   By: didias-d <didias-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 13:28:38 by didias-d          #+#    #+#             */
-/*   Updated: 2026/10/13 23:12:57 by didias-d         ###   ########.fr       */
+/*   Updated: 2026/10/14 10:45:26 by didias-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 static size_t	lenfunction(int n)
 {

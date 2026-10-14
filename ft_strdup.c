@@ -6,12 +6,10 @@
 /*   By: didias-d <didias-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/09 18:28:12 by didias-d          #+#    #+#             */
-/*   Updated: 2026/10/09 19:08:14 by didias-d         ###   ########.fr       */
+/*   Updated: 2026/10/14 10:47:44 by didias-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *s)

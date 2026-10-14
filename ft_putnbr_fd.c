@@ -6,12 +6,11 @@
 /*   By: didias-d <didias-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 10:48:43 by didias-d          #+#    #+#             */
-/*   Updated: 2026/10/13 14:28:41 by didias-d         ###   ########.fr       */
+/*   Updated: 2026/10/14 10:47:32 by didias-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "unistd.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

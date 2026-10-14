@@ -6,9 +6,11 @@
 /*   By: didias-d <didias-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 13:08:05 by didias-d          #+#    #+#             */
-/*   Updated: 2026/10/13 14:22:33 by didias-d         ###   ########.fr       */
+/*   Updated: 2026/10/14 10:12:15 by didias-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
