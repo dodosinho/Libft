@@ -14,9 +14,11 @@
 
 char	**ft_split(char const *s, char c)
 {
-	size_t 	i;
+	size_t	i;
 	size_t	is_word;
-	char 	**tab;
+	char	**tab;
+	size_t	k;
+	size_t	l;
 
 	i = 0;
 	is_word = 0;
@@ -24,7 +26,6 @@ char	**ft_split(char const *s, char c)
 	{
 		while (s[i] == c && s[i] != '\0')
 			i++;
-
 		if (s[i] != '\0')
 		{
 			is_word++;
@@ -32,22 +33,24 @@ char	**ft_split(char const *s, char c)
 				i++;
 		}
 	}
-
 	tab = malloc(sizeof(char *) * (is_word + 1));
 	if (tab == NULL)
 		return (NULL);
-
+	k = 0;
 	i = 0;
 	while (s[i] != '\0')
 	{
 		while (s[i] == c && s[i] != '\0')
 			i++;
-
 		if (s[i] != '\0')
 		{
-			is_word++;
+			l = i;
 			while (s[i] != c && s[i] != '\0')
 				i++;
+			tab[k] = ft_substr(s, l, i - l);
+			k++;
 		}
 	}
+	tab[k] = NULL;
+	return (tab);
 }
