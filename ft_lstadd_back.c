@@ -6,9 +6,11 @@
 /*   By: didias-d <didias-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 14:07:14 by didias-d          #+#    #+#             */
-/*   Updated: 2026/10/14 15:15:53 by didias-d         ###   ########.fr       */
+/*   Updated: 2026/10/16 10:43:51 by didias-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
