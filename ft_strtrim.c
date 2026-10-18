@@ -15,6 +15,7 @@
 int	is_in_set(char c, char const *set)
 {
 	size_t	i;
+<<<<<<< HEAD
 
 	i = 0;
 	while (set[i] != '\0')
