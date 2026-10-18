@@ -12,48 +12,35 @@
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+int	is_in_set(char c, char const *set)
 {
 	size_t	i;
-	size_t	j;
-	size_t	k;
-	size_t	l;
-	char	*str;
+
+	i = 0;
+	while (set[i] != '\0')
+	{
+		if (set[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	size_t	start;
+	size_t	end;
 
 	if (s1 == NULL || set == NULL)
 		return (NULL);
 	if (s1[0] == '\0')
 		return (ft_strdup(""));
-	i = 0;
-	k = ft_strlen(s1) - 1;
-	while (s1[i] != '\0')
-	{
-		j = 0;
-		while (set[j] != '\0' && s1[i] != set[j])
-			j++;
-		if (set[j] == '\0')
-			break ;
-		i++;
-	}
-	while (k > i)
-	{
-		j = 0;
-		while (set[j] != '\0' && s1[k] != set[j])
-			j++;
-		if (set[j] == '\0')
-			break ;
-		k--;
-	}
-	str = malloc(sizeof(char) * (k - i + 2));
-	if (str == NULL)
-		return (NULL);
-	l = 0;
-	while (i <= k)
-	{
-		str[l] = s1[i];
-		i++;
-		l++;
-	}
-	str[l] = '\0';
-	return (str);
+
+	start = 0;
+	while (s1[start] != '\0' && is_in_set(s1[start], set))
+		start++;
+	end = ft_strlen(s1) - 1;
+	while (end > start && is_in_set(s1[end], set))
+		end--;
+	return (ft_substr(s1, start, end - start + 1));
 }
