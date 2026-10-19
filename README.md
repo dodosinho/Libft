@@ -40,8 +40,6 @@ Example:
 
 cc main.c libft.a -o program
 
-## Library contents
-
 ### Character functions
 
 Functions used to test or convert characters:
@@ -119,7 +117,4 @@ behavior:
 - C manual pages (`man`)
 - 42 Libft subject
 - C documentation
-
-AI tools were used to help explain concepts, review code, and clarify the
-requirements of the project. The implementation and testing of the functions
-were done as part of the learning process.
+- AI tools
