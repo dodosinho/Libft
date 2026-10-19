@@ -12,43 +12,49 @@
 
 #include "libft.h"
 
-char	**ft_split(char const *s, char c)
+size_t	count_words(char const *s, char c)
 {
 	size_t	i;
-	size_t	is_word;
-	char	**tab;
-	size_t	k;
-	size_t	l;
+	size_t	words;
 
 	i = 0;
-	is_word = 0;
 	while (s[i] != '\0')
 	{
-		while (s[i] == c && s[i] != '\0')
+		while (s[i] == c)
 			i++;
 		if (s[i] != '\0')
 		{
-			is_word++;
-			while (s[i] != c && s[i] != '\0')
+			words++;
+			while (s[i] != '\0' && s[i] != c)
 				i++;
 		}
 	}
-	tab = malloc(sizeof(char *) * (is_word + 1));
+	return (words);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**tab;
+	size_t	i;
+	size_t	k;
+
+	if (s == NULL)
+		return (NULL);
+	tab = malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (tab == NULL)
 		return (NULL);
-	k = 0;
 	i = 0;
+	k = 0;
 	while (s[i] != '\0')
 	{
-		while (s[i] == c && s[i] != '\0')
+		while (s[i] == c)
 			i++;
 		if (s[i] != '\0')
 		{
-			l = i;
-			while (s[i] != c && s[i] != '\0')
+			start = i;
+			while (s[i] && s[i] != c)
 				i++;
-			tab[k] = ft_substr(s, l, i - l);
-			k++;
+			tab[k++] = ft_substr(s, start, i - start);
 		}
 	}
 	tab[k] = NULL;

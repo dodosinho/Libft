@@ -15,7 +15,6 @@
 int	is_in_set(char c, char const *set)
 {
 	size_t	i;
-<<<<<<< HEAD
 
 	i = 0;
 	while (set[i] != '\0')
@@ -36,7 +35,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	if (s1[0] == '\0')
 		return (ft_strdup(""));
-
 	start = 0;
 	while (s1[start] != '\0' && is_in_set(s1[start], set))
 		start++;
